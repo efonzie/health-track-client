@@ -1,0 +1,28 @@
+***NOTES***
+AWS Key
+Access key ID: AKIA5V735GICQRXNY5G2
+
+
+s3 Bucket name: health-track-uploads
+s3 Bucket Region: US West (N. California)
+
+User Pool ID: us-east-2_RO1jOwWjW
+User Pool ARN: arn:aws:cognito-idp:us-east-2:940589265413:userpool/us-east-2_RO1jOwWjW
+
+App Client: health-track
+App Client ID: 1ji7em40jepc6d2rinoa0jtd06
+
+Identitiy Pool ID: us-east-2:b82dea93-df32-431d-94c6-e3e1ed483f9b
+
+npx aws-api-gateway-cli-test --username='efonzie@gmail.com' --password='Test@1234' --user-pool-id='us-east-2_RO1jOwWjW' --app-client-id='1ji7em40jepc6d2rinoa0jtd06' --cognito-region='us-east-2' --identity-pool-id='us-east-2:b82dea93-df32-431d-94c6-e3e1ed483f9b' --invoke-url='https://7tgb4gbxua.execute-api.us-east-2.amazonaws.com/prod/' --api-gateway-region='us-east-2' --path-template='notes' --method='POST' --body='{"content":"hello world","attachment":"hello.jpg"}'
+
+*** Sign up new user ***
+aws cognito-idp sign-up --region us-east-2 --client-id 1ji7em40jepc6d2rinoa0jtd06 --username <USER@EMAIL.COM> --password <PASSWORD>
+aws cognito-idp admin-confirm-sign-up --region us-east-2 --user-pool-id us-east-2_RO1jOwWjW --username <USER@EMAIL.COM>
+
+efonzie@gmail.com // Test@1234
+test@example.com // Test@1234
+danny@test.com // Hard2Guess!
+axel@test.com // Axel@1234
+matt@test.com // Matt@1234
+ethan@test.com // Ethan@1234
